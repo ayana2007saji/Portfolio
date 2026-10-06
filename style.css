@@ -1,0 +1,120 @@
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: #000000 #f1c3db; 
+  scrollbar-width: auto;
+}
+ #nav {
+	list-style: none;
+	background-color: black;
+	text-align: center;
+}
+#nav li{
+	display:inline;
+}
+#nav li a{
+	padding-left: 15px;
+    padding-right: 15px;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #f1c3db;
+	}
+#nav li a:hover{
+	background-color: white;
+}
+.intro-bg {
+  position: relative;
+  width: 100%;
+  height: 150vh; /*vh-veiew port height, 200% of the viewport height to allow scrolling*/
+  background-color: #000000;
+}
+
+.bg-text {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25vw; /* Scales with screen width */
+  font-weight: 900;
+  color: #f1c3db;
+  margin: 0;
+  text-transform: uppercase;
+  user-select: none;
+  line-height: 1;
+}
+
+.intro-card {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); /* Start 50px above final position */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);    /* Land in original position */
+  }
+}
+.image-wrapper {
+  width: min(400px, 80vw);
+  height: min(500px, 60vh);
+  border-radius: 40px; /* rounded corners */
+  overflow: hidden;
+  animation-name: slideDown;
+  animation-duration: 2.0s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards; 
+
+}
+
+/* Image inside the card */
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fits */
+}
+.intro-text {
+  max-width: 40rem;
+  margin: 0 1rem;
+  color: #ffffff;
+  font-size: 25px;
+  text-align: center;
+  animation-name: slideDown;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+#hobbies{
+  
+  width: 100%;
+  background-color: #f1c3db;
+  position: sticky;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.sub-texts {
+  position: absolute;
+  top: 20vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 15vw; /* Scales with screen width */
+  font-weight: 900;
+  color: #000000;
+  margin: 0;
+  text-transform: uppercase;
+  user-select: none;
+  line-height: 1;
+}
